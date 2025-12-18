@@ -1,11 +1,4 @@
-import { useEffect } from "react";
-
 const App = () => {
-  useEffect(() => {
-    // Redireciona para o arquivo HTML
-    window.location.href = "/index.html";
-  }, []);
-
   return (
     <div style={{ 
       minHeight: "100vh", 
@@ -14,7 +7,9 @@ const App = () => {
       alignItems: "center", 
       justifyContent: "center" 
     }}>
-      <p style={{ color: "hsl(240 5% 65%)" }}>Redirecionando...</p>
+      <p style={{ color: "hsl(240 5% 65%)" }}>
+        Site carregou corretamente
+      </p>
     </div>
   );
 };
