@@ -1,27 +1,22 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import { useEffect } from "react";
 
-const queryClient = new QueryClient();
+const App = () => {
+  useEffect(() => {
+    // Redireciona para o arquivo HTML
+    window.location.href = "/index.html";
+  }, []);
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+  return (
+    <div style={{ 
+      minHeight: "100vh", 
+      backgroundColor: "hsl(240 10% 4%)", 
+      display: "flex", 
+      alignItems: "center", 
+      justifyContent: "center" 
+    }}>
+      <p style={{ color: "hsl(240 5% 65%)" }}>Redirecionando...</p>
+    </div>
+  );
+};
 
 export default App;
