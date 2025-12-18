@@ -120,6 +120,20 @@
         @media (min-width: 768px) { .footer-container { flex-direction: row; } }
         .footer-logo { font-size: 1.125rem; font-weight: 600; }
         .footer-copyright { color: hsl(var(--muted-foreground)); font-size: 0.875rem; }
+    /* Forçar o "Entrar no Servidor" a ser branco */
+#discord-link,
+#discord-link-2 {
+  background-color: hsl(0 0% 100%) !important;
+  color: hsl(240 10% 4%) !important;
+  border: none !important;
+}
+
+#discord-link:hover,
+#discord-link-2:hover {
+  background-color: hsl(0 0% 96%) !important;
+  color: hsl(240 10% 4%) !important;
+}
+    
     </style>
 </head>
 <body>
